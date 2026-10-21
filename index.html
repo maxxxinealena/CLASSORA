@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classora - Smart Classroom Scheduling and Room Allocation</title>
-    <!-- Google Fonts for typography -->
+    <!-- Google Fonts: Cinzel & Inter from Figma design -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Top Header -->
     <header class="navbar">
-        <div class="logo-container">
-            <h1 class="brand-title">CLASSORA</h1>
-            <span class="badge">ALAB BulSU</span>
+        <div class="navbar-content">
+            <div class="logo-container">
+                <h1 class="brand-title">CLASSORA</h1>
+                <span class="badge">ALAB BulSU</span>
+            </div>
+            <p class="tagline">Smart Classroom Scheduling and Room Allocation</p>
         </div>
-        <p class="tagline">Smart Classroom Scheduling and Room Allocation</p>
     </header>
 
     <!-- Main Auth Card -->
@@ -54,7 +56,7 @@
             </div>
 
             <!-- Dynamic Form -->
-            <form id="auth-form" action="#" method="POST">
+            <form id="auth-form" onsubmit="event.preventDefault();">
                 
                 <!-- Full Name Field (Registration Only) -->
                 <div class="form-group" id="field-fullname">
@@ -80,7 +82,7 @@
                     </div>
                 </div>
 
-                <!-- Email Field (Swaps to "Email, ID, or Passkey" in Login Mode) -->
+                <!-- Email Field -->
                 <div class="form-group" id="field-email">
                     <div class="label-row">
                         <label for="email" id="email-label">EMAIL ADDRESS</label>
@@ -105,7 +107,7 @@
                     <span class="field-instruction" id="pw-instruction">Must be at least 8 characters</span>
                 </div>
 
-                <!-- Options Row: Terms (Registration) / Remember Me & Forgot Password (Login) -->
+                <!-- Options Row -->
                 <div class="form-options">
                     <div class="checkbox-group" id="group-terms">
                         <input type="checkbox" id="terms" required>
