@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classora - Smart Classroom Scheduling and Room Allocation</title>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Header -->
+    <header class="navbar">
+        <div class="logo-container">
+            <h1 class="brand-title">CLASSORA</h1>
+            <span class="badge">ALAB BulSU</span>
+        </div>
+        <p class="tagline">Smart Classroom Scheduling and Room Allocation</p>
+    </header>
+
+    <!-- Main Auth Card -->
+    <main class="auth-container">
+        <div class="auth-card">
+
+            <!-- Title & Subtitle -->
+            <div class="card-header">
+                <h2 id="card-title">Create Your <span>Identity</span></h2>
+                <p id="card-subtitle">Join thousands of members managing academic operations in real time.</p>
+            </div>
+
+            <!-- Top Tab Switcher: Registration vs Login -->
+            <div class="tab-switcher" role="tablist">
+                <button type="button" class="tab-btn active" id="tab-reg">REGISTRATION</button>
+                <button type="button" class="tab-btn" id="tab-login">ACCOUNT LOGIN</button>
+            </div>
+
+            <!-- Role Selection (Hidden in Login Mode) -->
+            <div class="role-selection" id="role-selector-block">
+                <span class="section-label">SELECT INSTITUTIONAL ROLE</span>
+                <div class="role-options">
+                    <button type="button" class="role-btn active" data-role="student">
+                        <span class="role-icon">👤</span> Student
+                    </button>
+                    <button type="button" class="role-btn" data-role="teacher">
+                        <span class="role-icon">🏅</span> Teacher
+                    </button>
+                    <button type="button" class="role-btn" data-role="admin">
+                        <span class="role-icon">🛡️</span> Admin
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Form -->
+            <form id="auth-form" action="#" method="POST">
+                
+                <!-- Full Name Field (Registration Only) -->
+                <div class="form-group" id="field-fullname">
+                    <div class="label-row">
+                        <label for="full-name">FULL NAME</label>
+                        <span class="field-hint">Required</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="full-name" placeholder="Enter your full name">
+                    </div>
+                </div>
+
+                <!-- ID Field (Registration Only) -->
+                <div class="form-group" id="field-id">
+                    <div class="label-row">
+                        <label for="institutional-id" id="id-label">STUDENT ID</label>
+                        <span class="field-hint" id="id-hint">Format: YYYY-XXXXXX</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <span class="input-icon">💳</span>
+                        <input type="text" id="institutional-id" placeholder="e.g., 2020123456">
+                    </div>
+                </div>
+
+                <!-- Email Field (Swaps to "Email, ID, or Passkey" in Login Mode) -->
+                <div class="form-group" id="field-email">
+                    <div class="label-row">
+                        <label for="email" id="email-label">EMAIL ADDRESS</label>
+                        <span class="field-hint" id="email-hint">@ms.bulsu.edu.ph</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <span class="input-icon">✉️</span>
+                        <input type="text" id="email" placeholder="student@ms.bulsu.edu.ph" required>
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group" id="field-password">
+                    <div class="label-row">
+                        <label for="password">PASSWORD</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" id="toggle-pw" aria-label="Toggle password visibility">👁️</button>
+                    </div>
+                    <span class="field-instruction" id="pw-instruction">Must be at least 8 characters</span>
+                </div>
+
+                <!-- Options Row: Terms (Registration) / Remember Me & Forgot Password (Login) -->
+                <div class="form-options">
+                    <div class="checkbox-group" id="group-terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">BulSU Terms of Academic Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <div class="checkbox-group hidden" id="group-remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    
+                    <a href="#" class="forgot-link hidden" id="link-forgot">Forgot Password?</a>
+                </div>
+
+                <!-- Main Action Button -->
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    Complete Student Registration &rarr;
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
